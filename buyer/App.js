@@ -64,7 +64,7 @@ const App: () => React$Node = () => {
         console.log('Messages', Messages);
         Messages.push(newMessage);
         console.log('ADA MESSAGE', newMessage);
-        setMessage(Messages);
+        setMessage([...Messages]);
       },
     );
 
@@ -129,14 +129,18 @@ const App: () => React$Node = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>MESSAGE</Text>
               <Text>...</Text>
-              {message.map((item, index) => {
-                return (
-                  <View key={index.toString()}>
-                    <Text>#{index}</Text>
-                    <Text>>{JSON.stringify(item)}</Text>
-                  </View>
-                );
-              })}
+              {message.length > 0 ? (
+                message.map((item, index) => {
+                  return (
+                    <View key={index.toString()}>
+                      <Text>#{index}</Text>
+                      <Text>>{JSON.stringify(item)}</Text>
+                    </View>
+                  );
+                })
+              ) : (
+                <Text>MESSAGE EMPTY</Text>
+              )}
               <Text>...</Text>
             </View>
             <View style={styles.sectionContainer}>
