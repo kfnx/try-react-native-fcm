@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "937474769187",
+    "firebase_url": "https://semart-test.firebaseio.com",
+    "project_id": "semart-test",
+    "storage_bucket": "semart-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937474769187:android:7366498340cc7860ac8c96",
+        "android_client_info": {
+          "package_name": "com.buyer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937474769187-o7m38p5lratv2qr4duc4rlqjtaea4q33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOeTz1V3UoUqpsSx0_TyjxyI9NgZG3-O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937474769187-o7m38p5lratv2qr4duc4rlqjtaea4q33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
