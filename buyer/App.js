@@ -63,9 +63,11 @@ const App: () => React$Node = () => {
     // #3
     const messageListener = messaging().onMessage(
       (newMessage: RemoteMessage) => {
+        const Messages = message;
+        console.log('Messages', Messages);
+        Messages.push(newMessage);
         console.log('ADA MESSAGE', newMessage);
-        const updatedMessage = [...message, newMessage];
-        setMessage(updatedMessage);
+        setMessage(Messages);
       },
     );
 
@@ -88,7 +90,7 @@ const App: () => React$Node = () => {
   async function handleSendMessage() {
     console.log('HIYA');
     const targetDeviceToken =
-      'dBeGwWbAQ5I:APA91bEVqnTRlcKmfgh3zRVkCQ0IJNBXONiu0M16eL16GTuBUX2__0K3UNwCIoq4imdFen9mcz3eA_7UlBQp7NDXrow4ehJSQOzbMoaijY4ox-2K8rJVmzCOsBKl8ZSb0PVvLzw5SUSZ';
+      'cWGy6niJjh0:APA91bE146rN7B-snokgjzEAZ0820SNLdNTa0TSkgAl4Gw0pv8BUu1q-6UuBAB3ATrshA_AFYom6xk2GcNkUJW2uznc7-kAoRleHixJVvX4Ab3fZO1mHbA4rEEg0JDZzigL-_wYggH8y';
     const message = {
       registration_ids: [targetDeviceToken],
       notification: {
@@ -138,7 +140,6 @@ const App: () => React$Node = () => {
                   </View>
                 );
               })}
-              <Text>{JSON.stringify(message)}</Text>
               <Text>...</Text>
             </View>
             <View style={styles.sectionContainer}>
