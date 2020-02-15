@@ -18,9 +18,6 @@ import {
 } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import type { RemoteMessage } from 'react-native-firebase';
-
-import firebase from '@react-native-firebase/app';
-
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
@@ -134,7 +131,7 @@ const App: () => React$Node = () => {
               <Text>...</Text>
               {message.map((item, index) => {
                 return (
-                  <View>
+                  <View key={index.toString()}>
                     <Text>#{index}</Text>
                     <Text>>{JSON.stringify(item)}</Text>
                   </View>
